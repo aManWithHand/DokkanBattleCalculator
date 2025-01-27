@@ -13,9 +13,12 @@ class App(customtkinter.CTk):
         self.grid_columnconfigure((0,2),weight=1)
 
         self.test1 = gui.InputFrame(self,"PHASE1 (before attack)")
-        self.test1.grid(column=1,row=0)
+        self.test1.grid(column=1,row=0,pady=15)
         self.test2 = gui.InputFrame(self,"PHASE2 (attacking)")
-        self.test2.grid(column=1,row=1)
+        self.test2.grid(column=1,row=1,pady=(0,15))
+
+        self.button1 = customtkinter.CTkButton(self,text="calculate")
+        self.button1.grid(column=1,row=2)
 
 
 if __name__ == "__main__":
