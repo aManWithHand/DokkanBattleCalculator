@@ -1,7 +1,7 @@
 # DokkanBattleCalculator
 A GUI calculator app for computing ATK and DEF in Dragon ball z dokkan battle game.
 
-![](https://github.com/aManWithHand/DokkanBattleCalculator/blob/main/assets/DBCv0.4.png)
+<img src="https://github.com/aManWithHand/DokkanBattleCalculator/blob/main/assets/DBCv0.4fix.png" >
 
 # Features
 - don't have to write math formula in excel sheet
