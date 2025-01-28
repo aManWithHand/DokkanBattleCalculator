@@ -10,15 +10,21 @@ class App(customtkinter.CTk):
         super().__init__(fg_color, **kwargs)
         self.title("Dokkan Battle Calculator")
         self.geometry(f"{400}x{600}")
-        self.grid_columnconfigure((0,2),weight=1)
-
-        self.test1 = gui.InputFrame(self,"PHASE1 (before attack)")
-        self.test1.grid(column=1,row=0,pady=15)
-        self.test2 = gui.InputFrame(self,"PHASE2 (attacking)")
-        self.test2.grid(column=1,row=1,pady=(0,15))
-
-        self.button1 = customtkinter.CTkButton(self,text="calculate")
-        self.button1.grid(column=1,row=2)
+        self.grid_columnconfigure((0,1,2),weight=1)
+#------------------DEF GUI------------------------------------------------#
+        self.defInput1 = gui.InputFrame(self,"PHASE1 (before attack)")
+        self.defInput1.grid(column=1,row=0,pady=15)
+        self.defInput2 = gui.InputFrame(self,"PHASE2 (attacking)")
+        self.defInput2.grid(column=1,row=1,pady=(0,15))
+        #add input for SA might use CTkSegmentedButton
+        self.defOutput1 = gui.OutputFrame(self,"DEF")
+        self.defOutput1.grid(column=1,row=3,pady=(15,15))
+        self.defButton1 = customtkinter.CTkButton(self,text="calculate",command=self._calDEF)
+        self.defButton1.grid(column=1,row=2)
+    
+    def _calDEF(self):
+        #self.defOutput1.show()
+        pass
 
 
 if __name__ == "__main__":

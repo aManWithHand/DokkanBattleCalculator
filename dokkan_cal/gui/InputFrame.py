@@ -5,8 +5,10 @@ class InputFrame(customtkinter.CTkFrame):
         super().__init__(master, width, height, corner_radius, border_width, bg_color, fg_color, border_color, background_corner_colors, overwrite_preferred_drawing_method, **kwargs)
         
         
-        self.button1 = customtkinter.CTkButton(self, state="disable", text=text, fg_color="#213c52",command=self.testButton)
-        self.button1.grid(column=0, row=0, padx=15, pady=15)
+        #self.button1 = customtkinter.CTkButton(self,width=150, state="disable", text=text, fg_color="#213c52",command=self.testButton)
+        #self.button1.grid(column=0, row=0, padx=15, pady=15)
+        self.label1 = customtkinter.CTkLabel(self,width=150, text=text)
+        self.label1.grid(column=0, row=0, padx=15, pady=15)
 
         self.entry1 = customtkinter.CTkEntry(self)
         self.entry1.grid(column=0, row=1, pady=(0,5))
@@ -16,9 +18,7 @@ class InputFrame(customtkinter.CTkFrame):
         self.entry3.grid(column=0, row=3, pady=(0,15))
 
     def getBuff(self):
-        return [self.entry1.get(),
-                self.entry2.get(),
-                self.entry3.get()]
+        return int(self.entry1.get())+int(self.entry2.get())+int(self.entry3.get())
     
     def testButton(self):
         print(self.getBuff())
