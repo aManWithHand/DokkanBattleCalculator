@@ -1,5 +1,4 @@
 import customtkinter
-import dokkan_cal as dk
 import dokkan_cal.gui as gui
 
 customtkinter.set_appearance_mode("System")  
@@ -12,9 +11,9 @@ class App(customtkinter.CTk):
         self.geometry(f"{400}x{600}")
         self.grid_columnconfigure((0,1,2),weight=1)
 #------------------DEF GUI------------------------------------------------#
-        self.defInput1 = gui.InputFrame(self,"PHASE1 (before attack)")
+        self.defInput1 = gui.PhaseFrame(self,"PHASE1 (before attack)")
         self.defInput1.grid(column=1,row=0,pady=15)
-        self.defInput2 = gui.InputFrame(self,"PHASE2 (attacking)")
+        self.defInput2 = gui.PhaseFrame(self,"PHASE2 (attacking)")
         self.defInput2.grid(column=1,row=1,pady=(0,15))
         #add input for SA might use CTkSegmentedButton
         self.defOutput1 = gui.OutputFrame(self,"DEF")

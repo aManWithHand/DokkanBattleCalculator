@@ -1,5 +1,5 @@
 import customtkinter
-import dokkan_cal as dk
+from ..base import Base
 
 class OutputFrame(customtkinter.CTkFrame):
     def __init__(self, master,text, width = 200, height = 200, corner_radius = None, border_width = None, bg_color = "transparent", fg_color = None, border_color = None, background_corner_colors = None, overwrite_preferred_drawing_method = None, **kwargs):
@@ -15,5 +15,8 @@ class OutputFrame(customtkinter.CTkFrame):
         self.label4 = customtkinter.CTkLabel(self,width=width,text="    SA: 254613")
         self.label4.grid(column=0, row=3, padx=15, pady=(0,5))
 
-    def show(self,calculator:dk.Base):
-        self.label2.configure(text="haha")
+    def show(self,base:Base):
+        #get data from base and show in OutputFrame
+        self.label2.configure(text=f"Phase1: {base.beforeAttack:7}")
+        self.label3.configure(text=f"Phase2: 254613")
+        self.label4.configure(text=f"    SA: 254613")

@@ -1,5 +1,5 @@
-from .Atk import Atk
-from .Def import Def
+from .attack import Attack
+from .defence import Defence
 
 class Card():
     pass

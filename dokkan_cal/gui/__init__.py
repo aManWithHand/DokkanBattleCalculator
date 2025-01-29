@@ -1,2 +1,3 @@
-from .InputFrame import InputFrame
-from .OutputFrame import OutputFrame
+from .phaseFrame import PhaseFrame
+from .outputFrame import OutputFrame
+from .statusFrame import StatusFrame
