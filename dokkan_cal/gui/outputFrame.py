@@ -20,3 +20,11 @@ class OutputFrame(customtkinter.CTkFrame):
         self.label2.configure(text=f"Phase1: {base.beforeAttack:7}")
         self.label3.configure(text=f"Phase2: 254613")
         self.label4.configure(text=f"    SA: 254613")
+    
+if __name__ == "__main__":
+
+    window = customtkinter.CTk()
+    lframe = OutputFrame(master=window,text="Output")
+    lframe.grid_configure(row=0,column=0)
+    print(lframe.getBuff())
+    window.mainloop()
