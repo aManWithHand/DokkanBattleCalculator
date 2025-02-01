@@ -19,8 +19,8 @@ class OutputFrame(customtkinter.CTkFrame):
     def show(self,base:Base):
         #get data from base and show in OutputFrame
         self.label2.configure(text=f"Phase1: {base.beforeAttack:7}")
-        self.label3.configure(text=f"Phase2: 254613")
-        self.label4.configure(text=f"    SA: 254613")
+        self.label3.configure(text=f"Phase2: {base.attacking:7}")
+        self.label4.configure(text=f"    SA: {base.superAttack:7}")
     
 # if __name__ == "__main__":
 #     window = customtkinter.CTk()

@@ -12,10 +12,13 @@ class PhaseFrame(customtkinter.CTkFrame):
 
         self.entry1 = customtkinter.CTkEntry(self)
         self.entry1.grid(column=0, row=1, pady=(0,5))
+        self.entry1.insert(0,"0")
         self.entry2 = customtkinter.CTkEntry(self)
         self.entry2.grid(column=0, row=2, pady=(0,5))
+        self.entry2.insert(0,"0")
         self.entry3 = customtkinter.CTkEntry(self)
         self.entry3.grid(column=0, row=3, pady=(0,15))
+        self.entry3.insert(0,"0")
 
     def getBuff(self):
         return int(self.entry1.get())+int(self.entry2.get())+int(self.entry3.get())
