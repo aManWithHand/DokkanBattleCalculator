@@ -23,10 +23,8 @@ class App(customtkinter.CTk):
         self.defInput3.grid_configure(column=1, row=1, pady=(0,15))
         self.defInput4 = gui.LinkFrame(self)
         self.defInput4.grid_configure(column=1, row=2, pady=(0,15))
-
+        #add superAttackFrame here
         
-        
-        #add input for SA might use CTkSegmentedButton
         self.defOutput1 = gui.OutputFrame(self,"DEF")
         self.defOutput1.grid_configure(column=1,row=4,pady=15)
         self.defButton1 = customtkinter.CTkButton(self,text="calculate",command=self.calDEF)
