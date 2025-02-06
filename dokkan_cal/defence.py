@@ -22,7 +22,8 @@ class Defence(Base):
     def cal(self):
         self._collectData()
         self.beforeAttack = Core.buff(self.base,[self.buffLeader,self.buffPhase1,self.buffLink])
-        #add afterattck calculation here
+        self.attacking = Core.buff(self.base,[self.buffLeader,self.buffPhase1,self.buffLink,self.buffPhase2])
+        #add superAttack calulation here
     
     def show(self):
         self._outFrame.show(self)
