@@ -17,18 +17,20 @@ class App(customtkinter.CTk):
         self.defInput1 = gui.LeaderFrame(self,values=["1","77", "170","200"])
         self.defInput1.grid_configure(column=2, row=1, pady=(0,0), padx=(0,15))
         
+        
         self.defInput2 = gui.PhaseFrame(self,"PHASE1 (before attack)")
         self.defInput2.grid_configure(column=1, row=0, pady=15, padx=15)
         self.defInput3 = gui.PhaseFrame(self,"PHASE2 (attacking)")
         self.defInput3.grid_configure(column=1, row=1, pady=(0,15))
         self.defInput4 = gui.LinkFrame(self)
         self.defInput4.grid_configure(column=1, row=2, pady=(0,15))
-        #add superAttackFrame here
+        self.defInput5 = gui.SuperAttackFrame(self)
+        self.defInput5.grid_configure(column=2, row=2, pady=(0,0), padx=(0,15))
         
         self.defOutput1 = gui.OutputFrame(self,"DEF")
-        self.defOutput1.grid_configure(column=1,row=4,pady=15)
+        self.defOutput1.grid_configure(column=1,row=4,pady=15, columnspan=2)
         self.defButton1 = customtkinter.CTkButton(self,text="calculate",command=self.calDEF)
-        self.defButton1.grid(column=1,row=3)
+        self.defButton1.grid_configure(column=1, row=3, columnspan=2)
 
 #------------------LOGIC--------------------------------------------------#
         self.defCalList = [dkc.Defence(stat=self.defInput0, leader=self.defInput1, phase1=self.defInput2, phase2=self.defInput3, link=self.defInput4, out=self.defOutput1)]
