@@ -13,4 +13,5 @@ A GUI calculator app for computing ATK and DEF in Dragon ball z dokkan battle ga
 > under development 
 
 # Credits
-- this project use GUI from Tom Schimansky ,[CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) 
+- this project use GUI from Tom Schimansky ,[CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
+- the calculation base from JordanW20 ,[his video is on Youtube](https://www.youtube.com/watch?v=o_jfRTluzPg)
