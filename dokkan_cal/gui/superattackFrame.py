@@ -20,4 +20,5 @@ class SuperAttackFrame(customtkinter.CTkFrame):
         self.entry1.insert(0,"0")
     
     def getBuff(self) -> int:
-        return int(self.segButton1.get())
+        buff = int(self.segButton1.get()) * int(self.entry1.get())
+        return buff

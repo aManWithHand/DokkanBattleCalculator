@@ -33,7 +33,7 @@ class App(customtkinter.CTk):
         self.defButton1.grid_configure(column=1, row=3, columnspan=2)
 
 #------------------LOGIC--------------------------------------------------#
-        self.defCalList = [dkc.Defence(stat=self.defInput0, leader=self.defInput1, phase1=self.defInput2, phase2=self.defInput3, link=self.defInput4, out=self.defOutput1)]
+        self.defCalList = [dkc.Defence(stat=self.defInput0, leader=self.defInput1, phase1=self.defInput2, phase2=self.defInput3, link=self.defInput4, sa=self.defInput5, out=self.defOutput1)]
     
     def calDEF(self):
         self.defCalList[0].cal()
