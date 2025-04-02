@@ -12,21 +12,23 @@ class App(customtkinter.CTk):
         #self.geometry(f"{500}x{700}")
 
 #------------------DEF GUI------------------------------------------------#
+#------------------right hand side----------------------------------------#
         self.defInput0 = gui.StatusFrame(self)
         self.defInput0.grid_configure(column=2, row=0, pady=(0,0))
         self.defInput1 = gui.LeaderFrame(self,values=["1","77", "170","200"])
         self.defInput1.grid_configure(column=2, row=1, pady=(0,0), padx=(0,15))
-        
-        
         self.defInput2 = gui.PhaseFrame(self,"PHASE1 (before attack)")
-        self.defInput2.grid_configure(column=1, row=0, pady=15, padx=15)
-        self.defInput3 = gui.PhaseFrame(self,"PHASE2 (attacking)")
-        self.defInput3.grid_configure(column=1, row=1, pady=(0,15))
+        self.defInput2.grid_configure(column=2, row=2, pady=15, padx=15)
+
+#------------------left hand side----------------------------------------#
         self.defInput4 = gui.LinkFrame(self)
-        self.defInput4.grid_configure(column=1, row=2, pady=(0,15))
+        self.defInput4.grid_configure(column=1, row=0, pady=(15,15))
+        self.defInput3 = gui.PhaseFrame(self,"PHASE2 (attacking)")
+        self.defInput3.grid_configure(column=1, row=1, pady=(0,15))   
         self.defInput5 = gui.SuperAttackFrame(self)
-        self.defInput5.grid_configure(column=2, row=2, pady=(0,0), padx=(0,15))
-        
+        self.defInput5.grid_configure(column=1, row=2, pady=(0,0), padx=(15,0))
+
+#--------------------------middle----------------------------------------#  
         self.defOutput1 = gui.OutputFrame(self,"DEF")
         self.defOutput1.grid_configure(column=1,row=4,pady=15, columnspan=2)
         self.defButton1 = customtkinter.CTkButton(self,text="calculate",command=self.calDEF)
